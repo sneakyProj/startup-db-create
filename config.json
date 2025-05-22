@@ -1,0 +1,40 @@
+{
+    "airtable": {
+      "baseId": "appwhoNiUyrWGxuJu",
+      "tableId": "tblzNjpgg7KTmQMqz",
+      "apiKey": "patfl42xX2A2KqCAO.611e4623d1449bacb227de5cd9c87bf17a498ce2f94e1da619484bb93d1b13a3",
+      "linkColumnName": "Signal NFX URL",
+      "outputColumnName": "LinkedIn URL_new"
+    },
+    "scraping": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "requestDelay": 2000,
+      "timeout": 15000,
+      "maxRetries": 3,
+      "followRedirects": true,
+      "maxLinksPerPage": 100,
+      "maxRecordsToProcess": 10
+    },
+    "linkFilters": {
+      "allowedDomains": ["linkedin.com"],
+      "blockedDomains": [],
+      "requiredPrefix": "https://www.linkedin.com",
+      "allowedExtensions": [],
+      "blockedExtensions": [".pdf", ".jpg", ".png", ".gif", ".zip", ".exe"],
+      "minLinkLength": 25,
+      "includeInternal": false,
+      "includeExternal": true
+    },
+    "output": {
+      "format": "json",
+      "saveToFile": true,
+      "outputPath": "./scraped_links.json",
+      "updateAirtable": true,
+      "logLevel": "info"
+    },
+    "selectors": {
+      "linkSelectors": ["a[href]", "link[href]"],
+      "excludeSelectors": [".footer", ".sidebar", ".advertisement", ".popup"],
+      "customSelectors": []
+    }
+  }
